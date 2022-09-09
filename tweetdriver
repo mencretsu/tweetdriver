@@ -13,11 +13,13 @@ driver = webdriver.Chrome(options = chrome_options)
 driver.get("https://twitter.com/login")
 
 sleep(10) #change this according to your load driver speed
-
-driver.find_element(By.NAME, "text").send_keys(username)
-driver.find_element(By.NAME, "text").send_keys(Keys.ENTER)
+userinput = driver.find_element(By.NAME, "text")
+userinput.send_keys(username)
+userinput.send_keys(Keys.ENTER)
 print("email submitted")
+
 sleep(2)
-driver.find_element(By.NAME, "password").send_keys(password)
-driver.find_element(By.NAME, "password").send_keys(Keys.ENTER)
+passinput= driver.find_element(By.NAME, "password")
+passinput.send_keys(password)
+passinput.send_keys(Keys.ENTER)
 print("password submitted\nsuccess login")
