@@ -12,7 +12,7 @@ chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
 driver = webdriver.Chrome(options = chrome_options)
 driver.get("https://twitter.com/login")
 
-sleep(10) #change this according to your load driver speed
+sleep(10) #change this according to your load driver speed/u can also use webdriverwait
 userinput = driver.find_element(By.NAME, "text")
 userinput.send_keys(username)
 userinput.send_keys(Keys.ENTER)
